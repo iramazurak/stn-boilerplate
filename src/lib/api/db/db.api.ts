@@ -253,7 +253,7 @@ export const gerUserIdByEmail = async (email: string): Promise<string | null> =>
 };
 
 export const createUser = async (
-    data: Pick<Prisma.UserCreateInput, 'email' | 'password'>,
+  data: Pick<Prisma.UserCreateInput, 'email' | 'password'>,
 ): Promise<Omit<User, 'password'>> => {
   const user = await prisma.user.create({
     data,

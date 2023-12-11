@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createCategory, getCategoriesList } from '@/lib/api/db';
-import { withSessionHandler } from "@/modules/auth/server/with-session-handler";
+import { withSessionHandler } from '@/modules/auth/server/with-session-handler';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,7 +13,7 @@ export const POST = withSessionHandler(async ({ req, currentUser }) => {
         name: body?.name ?? 'Undefined',
         color: body?.color ?? '#3F51B5',
       },
-        currentUser.id,
+      currentUser.id,
     );
 
     return NextResponse.json(category);
@@ -22,7 +22,7 @@ export const POST = withSessionHandler(async ({ req, currentUser }) => {
   }
 });
 
-export const GET = withSessionHandler(async ({ req, currentUser }) => {
+export const GET = withSessionHandler(async ({ currentUser }) => {
   try {
     const categories = await getCategoriesList(currentUser.id);
 

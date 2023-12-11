@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { createMessage, getChatById, getMockUserId } from '@/lib/api/db';
-import { withSessionHandler } from "@/modules/auth/server/with-session-handler";
+import { NextResponse } from 'next/server';
+import { createMessage, getChatById } from '@/lib/api/db';
+import { withSessionHandler } from '@/modules/auth/server/with-session-handler';
 
 export const POST = withSessionHandler(async ({ req, currentUser }) => {
   const body = await req.json();

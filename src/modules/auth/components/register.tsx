@@ -2,10 +2,10 @@
 
 import React, { FC } from 'react';
 import { AuthRegisterForm } from '@stn-ui/forms';
-import { useAuthorize } from "@/modules/auth/hooks/use-authorize";
+import { useAuthorize } from '@/modules/auth/hooks/use-authorize';
 
 export const Register: FC = () => {
-    const { handleFormSubmit } = useAuthorize('register');
+  const { handleFormSubmit } = useAuthorize('register');
 
-    return <AuthRegisterForm onSubmit={handleFormSubmit} />;
+  return <AuthRegisterForm onSubmit={handleFormSubmit} />;
 };

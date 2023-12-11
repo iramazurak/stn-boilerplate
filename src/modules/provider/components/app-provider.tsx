@@ -9,21 +9,21 @@ import { ToastProvider } from '@stn-ui/toasts';
 import { modals } from '@/modules/modals/components';
 
 interface Props {
-    session: Session | null;
+  session: Session | null;
 }
 
 export const AppProvider: FC<PropsWithChildren<Props>> = ({ children }) => (
-    <SessionProvider>
-        <UIProvider>
-            <ToastProvider>
-                <ModalProvider
-                    modalComponents={
-                        modals as unknown as ComponentProps<typeof ModalProvider>['modalComponents']
-                    }
-                >
-                    {children}
-                </ModalProvider>
-            </ToastProvider>
-        </UIProvider>
-    </SessionProvider>
+  <SessionProvider>
+    <UIProvider>
+      <ToastProvider>
+        <ModalProvider
+          modalComponents={
+            modals as unknown as ComponentProps<typeof ModalProvider>['modalComponents']
+          }
+        >
+          {children}
+        </ModalProvider>
+      </ToastProvider>
+    </UIProvider>
+  </SessionProvider>
 );

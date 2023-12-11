@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createChat, getCategoryById } from '@/lib/api/db';
-import { withSessionHandler } from "@/modules/auth/server/with-session-handler";
+import { withSessionHandler } from '@/modules/auth/server/with-session-handler';
 
 export const POST = withSessionHandler(async ({ req, currentUser }) => {
   try {

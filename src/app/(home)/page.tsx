@@ -6,9 +6,9 @@ import { ChatList, ChatListUnauthorized } from '@/modules/chat/components';
 export const dynamic = 'force-dynamic';
 
 const Home: NextPage = async () => {
-    const session = await auth();
+  const session = await auth();
 
-    return <>{session ? <ChatList /> : <ChatListUnauthorized />}</>;
+  return <>{session ? <ChatList /> : <ChatListUnauthorized />}</>;
 };
 
 export default Home;

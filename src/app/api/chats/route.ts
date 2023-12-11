@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getChatsList } from '@/lib/api/db';
-import { withSessionHandler } from "@/modules/auth/server/with-session-handler";
+import { withSessionHandler } from '@/modules/auth/server/with-session-handler';
 
 export const dynamic = 'force-dynamic';
 

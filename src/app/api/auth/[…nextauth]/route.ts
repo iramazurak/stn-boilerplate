@@ -1,1 +1,1 @@
-export { GET, POST } from '@/modules/auth/client'
+export { GET, POST } from '@/modules/auth/client';

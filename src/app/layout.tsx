@@ -23,13 +23,13 @@ const RootLayout: FC<RootLayout> = async ({ children }) => {
   const session = await auth();
 
   return (
-      <html lang="en">
+    <html lang="en">
       <body className={inter.className} suppressHydrationWarning>
-      <div id="root">
-        <AppProvider session={session}>{children}</AppProvider>
-      </div>
+        <div id="root">
+          <AppProvider session={session}>{children}</AppProvider>
+        </div>
       </body>
-      </html>
+    </html>
   );
 };
 
